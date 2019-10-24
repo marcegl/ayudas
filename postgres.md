@@ -34,3 +34,9 @@ cat file | docker exec -i {docker-postgres} pg_restore -U {user} -d {database_na
 cat db_backup | docker exec -i postgres_container pg_restore -U postgres -d bursatil
 ```
 
+crear db
+
+```
+docker exec -it postgres_container psql -U postgres -c "create database bursatil"
+```
+

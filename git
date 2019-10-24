@@ -1,0 +1,6 @@
+Para cambiar a conexion ssh y evitar validar en cada push cambiar 
+
+```shell
+git remote set-url origin git@github.com:<Username>/<Project>.git
+```
+

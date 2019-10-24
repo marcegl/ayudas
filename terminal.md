@@ -24,10 +24,18 @@ Categories=Development;Utilities;
 EOF
 ```
 
+para poder en el explorador "abrir con" en Exec= al final poner "%F"
+
 crear enlaces
 
 ```shell
 ln -s /archivo /enlace
+```
+
+para enlazar y lanzar directamente en la terminal
+
+```shell
+ln -s <dir de archivo> /usr/bin/<nombre>
 ```
 
 buscar texto dentro del resultado de la terminal
@@ -46,5 +54,11 @@ Despues de modificar el bash compilar
 
 ```shell
 source .bashrc
+```
+
+estado de la bateria
+
+```
+syacpi -V
 ```
 
