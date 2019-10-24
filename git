@@ -4,3 +4,9 @@ Para cambiar a conexion ssh y evitar validar en cada push cambiar
 git remote set-url origin git@github.com:<Username>/<Project>.git
 ```
 
+Cambiar de rama, con "-b" creamos si no existe
+
+```
+git checkout -b change_alice
+```
+
