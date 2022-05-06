@@ -6,7 +6,7 @@ tar xvzf dir_archivo -C dir_ubicacion
 
 ### crear archivo con texto
 
-ej: crear acceso de aplicacion
+Ej: crear acceso de aplicación
 
 ```shell
 cat << EOF > ~/.local/share/applications/postman2.desktop
@@ -62,3 +62,8 @@ estado de la bateria
 syacpi -V
 ```
 
+sudo lvresize -L+3G /dev/systemVG/lv_var -r
+
+sudo vgs
+
+df -h

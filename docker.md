@@ -119,3 +119,10 @@ network:
 		ipv4_address: 192.168.0.5
 ```
 
+ creación y ejecución rápida
+
+```bash
+docker build -t <nombre> .
+docker run -d <nombre>
+```
+
