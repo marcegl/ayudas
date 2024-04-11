@@ -24,3 +24,19 @@ borrar cambios sin commit
 git reset --hard
 ```
 
+En MacOS se debe crear un archivo en ~/.ssh/config
+
+```
+touch ~/.ssh/config
+```
+
+Con el contenido de:
+
+```
+Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+```
+
+reemplazar ~/.ssh/id_ed25519 si es distinto
