@@ -1,29 +1,62 @@
-Para cambiar a conexion ssh y evitar validar en cada push cambiar 
+# Uso de GIT
 
+## Tips 
+
+### Cambiar a conexion ssh y evitar validar en cada push cambiar 
 ```shell
 git remote set-url origin git@github.com:<Username>/<Project>.git
 ```
 
-Cambiar de rama, con "-b" creamos si no existe
-
+### Cambiar de rama
 ```
 git checkout -b change_alice
 ```
+con "-b" creamos si no existe
 
-update de gitignore
-
+### Update del gitignore
 ```
 git rm -r --cached .
 git add .
 git commit -m ".gitignore is now working"
 ```
+sin esto al modificar el gitignore no toma los cambios por defecto.
 
-borrar cambios sin commit
-
+### Borrar cambios sin commit
 ```
 git reset --hard
 ```
 
+## Para manejar multiples ssh key
+### Crear la key
+```
+ssh-keygen -t ed25519 -C "user@domain.com"
+```
+*siempre subir .pub a las plataformas*
+### Usar diferentes Key por dominio
+Editar config
+```
+code ~/.ssh/config
+```
+Agregar dominios como el ejemplo
+```
+# github account
+Host github.com
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_myaccount_github
+
+# gitlab account
+Host gitlab.com
+HostName gitlab.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_myaccount_gitlab
+
+# gitlab company account
+Host gitlab.my_company.com
+HostName gitlab.my_company.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_mycompanyaccount_gitlab
+```
 En MacOS se debe crear un archivo en ~/.ssh/config
 
 ```
